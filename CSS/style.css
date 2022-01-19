@@ -1,4 +1,83 @@
 body {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+
+  width: 100vw;
+  height: 2000px;
+
+  font-family: 'Encode Sans', sans-serif;
+  background-color: rgb(229, 229, 229);
+}
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: 54px;
+
+  background-color: rgb(0, 255, 255, 0.90);
+}
+main {
+  display: flex;
+
+  margin-top: 54px;
+  padding-top: 34px;
+  height: calc(100% - 54px);
+  width: 935px;
+  
+  background-color: rgb(228, 175, 115);
+}
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 215px;
+  height: 28px;
+  
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.06px;
+  color: #979797;
+
+  background-color: rgb(127, 255, 212);
+}
+.sidebar {
+  margin-left: 28px;
+  height: 100%;
+  width: 293px;
+
+  background-color: cornflowerblue;
+}
+.feed {
+  height: inherit;
+  width: 614px;
+  
+}
+.stories-box {
+  
+  height: 118px;
+  width: inherit;
+
+  border: 1px solid #DBDBDB;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background-color: chartreuse;
+}
+.feed-column {
+  margin-top: 24px;
+  height: 100%;
+  width: inherit;
+  
+  background-color: rgb(44, 44, 131);
+}
+.post {
+  margin-bottom: 60px;
+  height: 743px;
+  width: inherit;
+
+  background-color: crimson;
 }
