@@ -17,7 +17,25 @@
 
   <body>
     <header>
-      <div class="search-bar">Pesquisar</div>
+      <div class="icons-left">
+        <ion-icon name="logo-instagram"></ion-icon>
+
+        <div class="splitbar"></div>
+
+        <a href="https://www.instagram.com/"><img src="Images\logo.png" alt="Logo Instagra,"></a>
+      </div>
+
+      <div class="search-bar"><input type="text" id="search-tag" name="search-tag" placeholder="Pesquisar"></div>
+
+      <!---//TODO: alinhar o ponteiro de input na searchbar--->
+
+      <div class="icons-right">
+        <ion-icon name="paper-plane-outline"></ion-icon>
+        <ion-icon name="compass-outline"></ion-icon>
+        <ion-icon name="heart-outline"></ion-icon>
+        <ion-icon name="person-outline"></ion-icon>
+      </div>
+
     </header>
 
     <main>
@@ -41,7 +59,10 @@
 
     </main>
 
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <span>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </span>
   </body>
 
 </html>
