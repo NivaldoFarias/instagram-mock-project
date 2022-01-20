@@ -1,12 +1,16 @@
 body {
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
 
+  position: relative;
   width: 100vw;
   height: 2000px;
 
   font-family: 'Encode Sans', sans-serif;
   background-color: rgb(229, 229, 229);
+  overflow: scroll;
 }
 header {
   position: fixed;
@@ -56,6 +60,7 @@ main {
   height: inherit;
   width: 614px;
   
+  overflow: hidden;
 }
 .stories-box {
   
@@ -73,6 +78,7 @@ main {
   width: inherit;
   
   background-color: rgb(44, 44, 131);
+  overflow: inherit;
 }
 .post {
   margin-bottom: 60px;
