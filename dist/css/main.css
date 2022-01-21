@@ -16,7 +16,7 @@ body {
           justify-content: center;
   position: relative;
   width: 100vw;
-  height: 2000px;
+  height: 100%;
   font-family: 'Encode Sans', sans-serif;
   background-color: #e5e5e5;
   overflow: scroll;
@@ -40,9 +40,13 @@ header {
 }
 
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 118px auto;
+      grid-template-rows: 118px auto;
+  -ms-grid-columns: 614px auto;
+      grid-template-columns: 614px auto;
+  grid-gap: 24px 28px;
   margin-top: 54px;
   padding-top: 34px;
   height: calc(100% - 54px);
@@ -122,21 +126,20 @@ input[type=text] {
 }
 
 .sidebar {
-  margin-left: 28px;
-  height: 100%;
-  width: 293px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 3 / 3;
   background-color: cornflowerblue;
 }
 
-.feed {
-  height: inherit;
-  width: 614px;
-  overflow: hidden;
-}
-
 .stories-box {
-  height: 118px;
-  width: inherit;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
   border: 1px solid #DBDBDB;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -145,16 +148,16 @@ input[type=text] {
 }
 
 .feed-column {
-  margin-top: 24px;
-  height: 100%;
-  width: inherit;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 1 / 3 / 2;
   background-color: #2c2c83;
-  overflow: inherit;
 }
 
 .post {
   margin-bottom: 60px;
   height: 743px;
-  width: inherit;
   background-color: crimson;
 }
