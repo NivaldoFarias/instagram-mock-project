@@ -1,11 +1,16 @@
-$font-colors:(
-  "default" rgb(38, 38, 38),
-  "gray-normal" rgb(142, 142, 142),
-  "gray-invisible" rgb(199, 199, 199),
-  "Follow" rgb(19, 158, 242)
+$font-colors: (
+  "default": rgb(38, 38, 38),
+  "gray-normal": rgb(142, 142, 142),
+  "gray-invisible": rgb(199, 199, 199),
+  "Follow": rgb(19, 158, 242)
 );
 $font-weights: (
   "regular": 400,
   "medium": 500,
   "bold": 700
+);
+$font-sizes: (
+  "small": 11px,
+  "medium": 12px,
+  "big": 14px
 )

@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Encode Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -21,6 +21,7 @@ body {
 
 header {
   position: fixed;
+  z-index: 10;
   top: 0px;
   left: 0px;
   display: -webkit-box;
@@ -130,7 +131,7 @@ input[type=text] {
   background-color: cornflowerblue;
 }
 
-.stories-box {
+.stories-container {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -139,18 +140,29 @@ input[type=text] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+  text-align: center;
+  font-size: 12px;
+  color: #262626;
+  font-weight: 400;
   padding: 18px 0px 14px 18px;
   border: 1px solid #dbdbdb;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 3px;
   background-color: white;
+  z-index: 1;
+}
+
+.stories-box {
+  position: relative;
+  width: 66px;
+  z-index: 2;
 }
 
 .feed-column {
@@ -165,4 +177,11 @@ input[type=text] {
   margin-bottom: 60px;
   height: 743px;
   background-color: crimson;
+}
+
+.inner-image {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 3;
 }
