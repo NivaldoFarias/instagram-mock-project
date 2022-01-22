@@ -8,6 +8,7 @@ body {
   position: relative;
   width: 100vw;
   height: 100%;
+  overflow-x: hidden;
 
   background-color: rgb(229, 229, 229);
 }
@@ -127,6 +128,11 @@ input[type=text] {
   height: 743px;
 
   background-color: crimson;
+}
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 18px 14px 17px;
 }
 .inner-image {
   position: absolute;
