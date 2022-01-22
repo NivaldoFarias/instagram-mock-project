@@ -10,7 +10,7 @@ body {
   height: 100%;
   overflow-x: hidden;
 
-  background-color: rgb(229, 229, 229);
+  background-color: rgb(250, 250, 250);
 }
 header {
   position: fixed;
@@ -46,7 +46,9 @@ input[type=text] {
 
   border: 0;
   outline: 0;
+  background-color: inherit;
 }
+
 .icons-left {
   display: flex;
   justify-content: center;
@@ -127,12 +129,64 @@ input[type=text] {
   margin-bottom: 60px;
   height: 743px;
 
-  background-color: crimson;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 3px;
+}
+.post > img {
+  width: 100%;
 }
 .post-header {
   display: flex;
   align-items: center;
   padding: 15px 18px 14px 17px;
+  font-weight: map-get($font-weights , "bold");
+
+
+  img {
+    margin-right: 15px;
+  }
+  p {
+    margin-right: 445px;
+  }
+}
+.post-footer {
+  position: relative;
+  height: 76px;
+
+  ion-icon {
+  font-size: 22px;
+  }
+  :first-child {
+    position: absolute;
+    top: 6px;
+    left: 15px;
+  }
+  :nth-child(2) {
+    position: absolute;
+    top: 6px;
+    left: 50px;
+  }
+  :nth-child(3) {
+    position: absolute;
+    top: 6.5px;
+    left: 86px;
+  }
+  :nth-child(4) {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+  }
+  img {
+    position: absolute;
+    top: 35px;
+    left: 15px; 
+  }
+  p {
+    span {
+      font-weight: map-get($font-weights, "bold");
+    } 
+  }
 }
 .inner-image {
   position: absolute;
@@ -141,3 +195,4 @@ input[type=text] {
 
   z-index: 3;
 }
+

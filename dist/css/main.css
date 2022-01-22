@@ -17,7 +17,7 @@ body {
   width: 100vw;
   height: 100%;
   overflow-x: hidden;
-  background-color: #e5e5e5;
+  background-color: #fafafa;
 }
 
 header {
@@ -61,6 +61,7 @@ input[type=text] {
   text-align: center;
   border: 0;
   outline: 0;
+  background-color: inherit;
 }
 
 .icons-left {
@@ -177,7 +178,13 @@ input[type=text] {
 .post {
   margin-bottom: 60px;
   height: 743px;
-  background-color: crimson;
+  background: white;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+}
+
+.post > img {
+  width: 100%;
 }
 
 .post-header {
@@ -188,6 +195,58 @@ input[type=text] {
       -ms-flex-align: center;
           align-items: center;
   padding: 15px 18px 14px 17px;
+  font-weight: 700;
+}
+
+.post-header img {
+  margin-right: 15px;
+}
+
+.post-header p {
+  margin-right: 445px;
+}
+
+.post-footer {
+  position: relative;
+  height: 76px;
+}
+
+.post-footer ion-icon {
+  font-size: 22px;
+}
+
+.post-footer :first-child {
+  position: absolute;
+  top: 6px;
+  left: 15px;
+}
+
+.post-footer :nth-child(2) {
+  position: absolute;
+  top: 6px;
+  left: 50px;
+}
+
+.post-footer :nth-child(3) {
+  position: absolute;
+  top: 6.5px;
+  left: 86px;
+}
+
+.post-footer :nth-child(4) {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+}
+
+.post-footer img {
+  position: absolute;
+  top: 35px;
+  left: 15px;
+}
+
+.post-footer p span {
+  font-weight: 700;
 }
 
 .inner-image {
