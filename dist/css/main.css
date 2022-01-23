@@ -28,14 +28,25 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: inherit;
   height: 54px;
   background-color: rgba(255, 255, 255, 0.98);
+}
+
+header .header-full {
+  width: 935px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main {
@@ -299,8 +310,7 @@ input[type=text] {
   grid-area: 1 / 2 / 3 / 3;
   position: fixed;
   top: 88px;
-  bottom: 2105px;
-  right: 286px;
+  right: 470px;
   height: 446px;
   width: 293px;
   padding: 0;
