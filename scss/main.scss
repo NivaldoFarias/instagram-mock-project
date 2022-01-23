@@ -151,41 +151,43 @@ input[type=text] {
   }
 }
 .post-footer {
-  position: relative;
-  height: 76px;
+  height: 66px;
+  width: 614px;
+  padding: 5px 8px 8px 8px;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 5.5% 5.5% 5.5% auto 5.5%;
+  grid-row-gap: 4px;
+  justify-items: center;
+  align-items: center;
 
   ion-icon {
-  font-size: 22px;
+    font-size: 21px;
   }
   :first-child {
-    position: absolute;
-    top: 6px;
-    left: 15px;
+    grid-area: 1 / 1 / 2 / 2;
   }
   :nth-child(2) {
-    position: absolute;
-    top: 6px;
-    left: 50px;
+    grid-area: 1 / 2 / 2 / 3;
   }
   :nth-child(3) {
-    position: absolute;
-    top: 6.5px;
-    left: 86px;
+    grid-area: 1 / 3 / 2 / 4;
   }
   :nth-child(4) {
-    position: absolute;
-    top: 7px;
-    right: 10px;
+    grid-area: 1 / 5 / 2 / 6;
   }
-  img {
-    position: absolute;
-    top: 35px;
-    left: 15px; 
+  :nth-child(6) {
+    grid-area: 2 / 1 / 3 / 2;
   }
-  p {
+  :nth-child(7) {
+    grid-area: 2 / 2 / 3 / 6;
+    font-size: map-get($font-sizes, "big");
+    justify-self: flex-start;
+    
     span {
-      font-weight: map-get($font-weights, "bold");
-    } 
+      font-weight: map-get($font-weights , bold );
+    }
   }
 }
 .inner-image {
@@ -194,5 +196,58 @@ input[type=text] {
   left: 5px;
 
   z-index: 3;
+}
+.sidebar {
+  height: 446px;
+  width: 293px;
+  padding: 0;
+
+  display: grid;
+  grid-template-rows: 23.1% 3.369% repeat(5, 6.956%) 9.2% 3.141%;
+  grid-template-columns: auto;
+  justify-items: center;
+  align-items: center;
+
+  :first-child {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  :nth-child(2) {
+    grid-area: 1 / 2 / 2 / 3;
+    
+    margin-bottom: 17px;
+  }
+  :nth-child(3) {
+    grid-area: 1 / 3 / 2 / 4;
+
+    margin-bottom: 16px;
+  }
+  :nth-child(4) {
+    grid-area: 1 / 4 / 2 / 5;
+
+    margin-bottom: 16px;
+  }
+  :nth-child(5) {
+    grid-area: 1 / 5 / 2 / 6;
+
+    margin-bottom: 16px;
+  }
+  :nth-child(6) {
+    grid-area: 1 / 6 / 2 / 7;
+
+    margin-bottom: 16px;
+  }
+  :nth-child(7) {
+    grid-area: 1 / 7 / 2 / 8;
+
+    margin-bottom: 33px;
+  }
+  :nth-child(8) {
+    grid-area: 1 / 8 / 2 / 9;
+
+    margin-bottom: 18px;
+  }
+  :nth-child(9) {
+    grid-area: 1 / 9 / 2 / 10;
+  }
 }
 
