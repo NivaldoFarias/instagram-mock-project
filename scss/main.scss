@@ -48,7 +48,6 @@ input[type=text] {
   outline: 0;
   background-color: inherit;
 }
-
 .icons-left {
   display: flex;
   justify-content: center;
@@ -92,29 +91,40 @@ input[type=text] {
   justify-content: space-between;
 
 }
-.sidebar {
-  grid-area: 1 / 2 / 3 / 3;
-
-  background-color: cornflowerblue;
-}
 .stories-container {
   grid-area: 1 / 1 / 2 / 2;
 
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  overflow: hidden;
   text-align: center;
+  overflow-x: hidden;
+  line-height: 15px;
 
-  font-size: map-get($font-sizes, "medium");
-  color: map-get($font-colors, "default");
-  font-weight: map-get($font-weights, "regular");
+  position: relative;
 
   padding: 18px 0px 14px 18px;
   border: 1px solid rgb(219, 219, 219);
   border-radius: 3px;
   background-color: rgb(255, 255, 255);
   z-index: 1;
+
+  .stories-box{
+    margin-right: 14px;
+
+    font-size: map-get($font-sizes, "medium");
+    color: map-get($font-colors, "default");
+    font-weight: map-get($font-weights, "regular");
+  }
+  > ion-icon {
+    position: absolute;
+    z-index: 6;
+    top: 35px;
+    right: 7px;
+
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+  }
+  
 }
 .stories-box {
   position: relative;
@@ -198,56 +208,148 @@ input[type=text] {
   z-index: 3;
 }
 .sidebar {
+  grid-area: 1 / 2 / 3 / 3; 
+
   height: 446px;
   width: 293px;
   padding: 0;
 
   display: grid;
-  grid-template-rows: 23.1% 3.369% repeat(5, 6.956%) 9.2% 3.141%;
-  grid-template-columns: auto;
+  grid-template-rows: 23.1% 3.369% 15% repeat(4, 10%) 15.05% auto;
+  grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: center;
 
+  font-size: map-get($font-sizes, "medium");
+
   :first-child {
-    grid-area: 1 / 1 / 2 / 2;
+    grid-area: 1 / 1 / span 1 / span 2;
+
+    justify-self: flex-start;
   }
   :nth-child(2) {
-    grid-area: 1 / 2 / 2 / 3;
-    
-    margin-bottom: 17px;
+    grid-area: 2 / 1 / span 1 / span 1;
+
+    justify-self: flex-start;
+    color: map-get($font-colors, "gray-normal");
   }
   :nth-child(3) {
-    grid-area: 1 / 3 / 2 / 4;
+    grid-area: 2 / 2 / span 1 / span 1;
 
-    margin-bottom: 16px;
+    justify-self: flex-end;
+    font-weight: map-get($font-weights, "medium");
   }
   :nth-child(4) {
-    grid-area: 1 / 4 / 2 / 5;
+    grid-area: 3 / 1 / span 1 / span 2;
 
-    margin-bottom: 16px;
+    padding-top: 5px;
+    justify-self: flex-start;
   }
   :nth-child(5) {
-    grid-area: 1 / 5 / 2 / 6;
+    grid-area: 4 / 1 / span 1 / span 2;
 
-    margin-bottom: 16px;
+    justify-self: flex-start;
   }
   :nth-child(6) {
-    grid-area: 1 / 6 / 2 / 7;
+    grid-area: 5 / 1 / span 1 / span 2;
 
-    margin-bottom: 16px;
+    justify-self: flex-start;
   }
   :nth-child(7) {
-    grid-area: 1 / 7 / 2 / 8;
+    grid-area: 6 / 1 / span 1 / span 2;
 
-    margin-bottom: 33px;
+    justify-self: flex-start;
   }
   :nth-child(8) {
-    grid-area: 1 / 8 / 2 / 9;
+    grid-area: 7 / 1 / span 1 / span 2;
 
-    margin-bottom: 18px;
+    justify-self: flex-start;
   }
   :nth-child(9) {
-    grid-area: 1 / 9 / 2 / 10;
+    grid-area: 8 / 1 / span 1 / span 2;
+
+    justify-self: flex-start;
+    line-height: 12.89px;
+    font-size: map-get($font-sizes, "small");
+    color: map-get($font-colors, "gray-invisible");
+  }
+  :nth-child(10) {
+    grid-area: 9 / 1 / span 1 / span 2;
+
+    justify-self: flex-start;
+    align-self: flex-end;
+    line-height: 12.89px;
+    font-size: map-get($font-sizes, "small");
+    color: map-get($font-colors, "gray-invisible");
   }
 }
+.sidebar-header {
+  display: grid; 
+  grid-template-columns: 70px 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 3px 0px; 
+  grid-template-areas: 
+    "image user-profile user-profile"
+    "image name-profile name-profile"; 
+  width: 293px; 
+  height: 103px; 
+  align-items: center;
+  font-size: map-get($font-sizes, "big");
 
+  :first-child {
+    grid-area: image; 
+  }
+  :nth-child(2) {
+    grid-area: user-profile;
+
+    justify-self: flex-start;
+    align-self: flex-end;
+    color: map-get($font-colors, "default");
+    font-weight: map-get($font-weights , "medium");
+  }
+  :nth-child(3) {
+    grid-area: name-profile;
+
+    justify-self: flex-start;
+    align-self: flex-start;
+    color: map-get($font-colors, "gray-normal");
+    font-weight: map-get($font-weights , "light");
+  }
+}
+.sidebar-profile-suggestions {
+  width: 293px; 
+  height: 32px; 
+  display: grid; 
+  grid-template-columns: 32px 1fr 1fr; 
+  grid-template-rows: 16px 16px; 
+  gap: 0px 11px; 
+  grid-template-areas: 
+    "img profile-name follow-buttom"
+    "img profile-info follow-buttom";
+
+  :first-child {
+    grid-area: img;
+  }
+  :nth-child(2) {
+    grid-area: profile-name; 
+
+    font-weight: map-get($font-weights , "bold");
+    color: map-get($font-colors, "default");
+  }
+  :nth-child(3) {
+    grid-area: profile-info;
+    justify-self: flex-start;
+    align-self: flex-end;
+
+    color: map-get($font-colors, "gray-normal");
+    font-weight: map-get($font-weights , "regular");
+  }
+  :nth-child(4) {
+    grid-area: follow-buttom; 
+    justify-self: flex-end;
+    align-self: center;
+
+    font-weight: map-get($font-weights , "medium");
+    color: map-get($font-colors, "blue");
+  }
+}
