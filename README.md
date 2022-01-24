@@ -30,7 +30,7 @@
   <p align="center">
     Web Development Project using HTML and CSS  
     <br />
-    <a href="https://github.com/NivaldoFarias/Projeto-Layout-Instagram/blob/dist/index.html"><strong>View HTML Code»</strong></a>
+    <a href="https://github.com/NivaldoFarias/Projeto-Layout-Instagram/blob/main/dist/index.html"><strong>View HTML Code»</strong></a>
     or
     <a href="https://github.com/NivaldoFarias/Projeto-Layout-Instagram/blob/main/scss/main.scss"><strong>View SCSS Code»</strong></a>
 </div>
