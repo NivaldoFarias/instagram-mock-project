@@ -26,7 +26,7 @@
   </a>
 
 <h3 align="center">Instagram Layout Project</h3>
-  <h6 align="center">WIP</h6>
+<!--  <h6 align="center">WIP</h6> -->
   <p align="center">
     Web Development Project using HTML and CSS  
     <br />
